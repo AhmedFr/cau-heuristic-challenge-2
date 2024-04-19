@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
+    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/mitsubishi.py", line 38, in decide_new_village
+    if random() < exp(-delta/T):
+NameError: name 'random' is not defined
+
+
+Traceback (most recent call last):
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
+    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/mitsubishi.py", line 38, in decide_new_village
+    if random() < exp(-delta/T):
+NameError: name 'random' is not defined
+
+
+Traceback (most recent call last):
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
+    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/mitsubishi.py", line 38, in decide_new_village
+    if random() < exp(-delta/T):
+NameError: name 'random' is not defined
+
+
+Traceback (most recent call last):
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
+    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/mitsubishi.py", line 38, in decide_new_village
+    if random() < exp(-delta/T):
+NameError: name 'random' is not defined
+
+
+Traceback (most recent call last):
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
+    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
+  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/mitsubishi.py", line 38, in decide_new_village
+    if random() < exp(-delta/T):
+NameError: name 'random' is not defined
