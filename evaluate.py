@@ -52,10 +52,12 @@ def evaluate_algorithm(agent_name, initial_state, result_queue: Queue):
                             format='%(asctime)s [%(name)-12s] %(levelname)-8s %(message)s',
                             filename=f'execution-{agent_name}.log',
                             # Also, the output will be logged in 'execution-(agent).log' file.
-                            filemode='w+')  # The logging file will be overwritten.
+                            filemode='w+',
+                            force=True)  # The logging file will be overwritten.
     else:
         logging.basicConfig(level=logging.INFO,
-                            format='%(asctime)s [%(name)-12s] %(levelname)-8s %(message)s')
+                            format='%(asctime)s [%(name)-12s] %(levelname)-8s %(message)s',
+                            force=True)
 
     # Set up the given problem
     problem = GameBoard()
@@ -109,8 +111,8 @@ def evaluate_algorithm(agent_name, initial_state, result_queue: Queue):
     # Execute the solution for evaluation
     if solution is not None:
         try:
-            problem.simulate_action(initial_state[0], VILLAGE(solution))
-            fitness_score = problem.evaluate_state()  # Performance measure II
+            state = problem.simulate_action(initial_state[0], VILLAGE(solution))
+            fitness_score = problem.evaluate_state(state)  # Performance measure II
             num_calls = problem._simulation_calls  # Performance measure III
         except:
             failure = format_exc()

@@ -157,7 +157,8 @@ def _read_state(game: Game, player: int) -> dict:
                 tuple(sorted(coordinate_to_tuple(c) for c in h.path_coords))
                 for h in game.players[player].connected_harbors
             ]
-        }
+        },
+        'robber': coordinate_to_tuple(game.board.robber)
     }
 
 
@@ -229,6 +230,14 @@ def _restore_state(game: Game, state: dict, turnoff_check: bool):
     for (c1, c2) in state['player']['harbors']:
         c = tuple_to_path_coordinate((c1, c2))
         game.players[player].connected_harbors.add(game.board.harbors[c])
+
+    # Move robber
+    if 'robber' in state:
+        game.board.robber = tuple_to_coordinate(state['robber'])
+    else:
+        game.board.robber = [
+            h.coords for h in game.board.hexes.values() if h.hex_type == HexType.DESERT
+        ][0]
 
     return player
 
@@ -670,6 +679,7 @@ class GameBoard:
         # Copy the current state to return
         self._current = _read_state(self._game, self._player_number)
         self._current['dice_roll'] = self._dice_roll
+        self._current['setup_turn'] = self._setup_turn
 
         if IS_DEBUG:  # Logging for debug
             self._logger.debug('State has been changed to: \n' + _unique_game_state_identifier(self._game))
@@ -701,7 +711,7 @@ class GameBoard:
         # Evaluate the expected resource income
         earned = 0.0
         for roll, prob in DICE_ROLL.items():
-            players_yields = self._game.board.get_yield_for_roll(roll + 1)
+            players_yields = self._game.board.get_yield_for_roll(roll)
             if player not in players_yields:
                 continue
 
