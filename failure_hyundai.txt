@@ -12,27 +12,3 @@ Traceback (most recent call last):
   File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/hyundai.py", line 40, in decide_new_village
     population.sort(key=lambda x: board.simulate_action(initial, VILLAGE(x)))
 TypeError: '<' not supported between instances of 'dict' and 'dict'
-
-
-Traceback (most recent call last):
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
-    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/hyundai.py", line 40, in decide_new_village
-    population.sort(key=lambda x: board.simulate_action(initial, VILLAGE(x)))
-TypeError: '<' not supported between instances of 'dict' and 'dict'
-
-
-Traceback (most recent call last):
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
-    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/hyundai.py", line 40, in decide_new_village
-    population.sort(key=lambda x: board.simulate_action(initial, VILLAGE(x)))
-TypeError: '<' not supported between instances of 'dict' and 'dict'
-
-
-Traceback (most recent call last):
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/evaluate.py", line 92, in evaluate_algorithm
-    solution = agent.decide_new_village(problem, time_limit=time_start + 60)  # 10 minutes
-  File "/Users/ahmedabouelleil/personal/cau-heuristic-challenge-2/agents/hyundai.py", line 40, in decide_new_village
-    population.sort(key=lambda x: board.simulate_action(initial, VILLAGE(x)))
-TypeError: '<' not supported between instances of 'dict' and 'dict'

@@ -1,0 +1,3 @@
+2024-05-01 16:15:28,388 [Evaluate    ] INFO     Loading ferrari agent to memory...
+2024-05-01 16:15:28,388 [Evaluate    ] INFO     Begin to search using ferrari agent.
+2024-05-01 16:15:28,435 [Evaluate    ] INFO     Search finished for ferrari, using 0MB during search.
